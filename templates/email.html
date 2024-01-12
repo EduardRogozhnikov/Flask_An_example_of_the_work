@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+email-письма
+{% endblock %}
+
+{% block body %}
+<h1 align="center">Примеры email-писем</h1>
+
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url({{ url_for('static', filename='img/uber.PNG') }}); href={{ url_for('mail_uber') }}">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 align="center" class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url({{ url_for('static', filename='img/aushan.PNG') }}); href={{ url_for('mail_other') }}">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url({{ url_for('static', filename='img/dugimail.PNG') }}); href={{ url_for('mail_other') }}">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -9,8 +9,13 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/email')
+def email():
+    return render_template('email.html')
+
+
 @app.route('/mail_uber')
-def uber():
+def mail_uber():
     return render_template('letter_example_1.html')
 
 
